@@ -1,0 +1,21 @@
+{
+  "name": "lexed",
+  "version": "1.0.0",
+  "description": "Multi-lingual, extensible word and sentence tokenizer and lexer, for natural language processing.",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/test"
+  },
+  "keywords": [
+    "lexer",
+    "lexed",
+    "word",
+    "sentence",
+    "tokenization"
+  ],
+  "author": "Alex Corvi <alex@arrayy.com>",
+  "license": "MIT"
+}
