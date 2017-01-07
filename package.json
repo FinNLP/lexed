@@ -17,5 +17,13 @@
     "tokenization"
   ],
   "author": "Alex Corvi <alex@arrayy.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcorvi/lexed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexcorvi/lexed/issues"
+  },
+  "homepage": "https://github.com/alexcorvi/lexed#readme"
 }
