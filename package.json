@@ -1,6 +1,6 @@
 {
   "name": "lexed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi-lingual, extensible word and sentence tokenizer and lexer, for natural language processing.",
   "main": "./lib/index.js",
   "directories": {
