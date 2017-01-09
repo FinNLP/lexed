@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/test"
+    "test": "mocha test/examples && mocha test/penn-treebank"
   },
   "keywords": [
     "lexer",
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/alexcorvi/lexed/issues"
   },
-  "homepage": "https://github.com/alexcorvi/lexed#readme"
+  "homepage": "https://github.com/alexcorvi/lexed#readme",
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5"
+  }
 }
