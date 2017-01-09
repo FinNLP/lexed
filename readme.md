@@ -164,6 +164,11 @@ lexed.extend.abbreviations(lexed.outOftheBox.abbreviations);
 ```
 ## Contributing
 
+* Clone the repository: `git clone https://github.com/alexcorvi/lexed.git`
+* Install dependencies: `cd lexed && npm install`
+* Install Mocha globally: `npm install -g mocha`
+* ...
+* Test `npm test`
 
 ## License
 The MIT License (MIT) - Copyright (c) 2017 Alex Corvi
