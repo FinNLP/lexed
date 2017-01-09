@@ -9,7 +9,7 @@
 **/
 
 const lexed = require("../lib/index.js");
-const beforeExtending = lexed.sentence("my new company's name is A! L! E! X!.");
+const beforeExtending = lexed.sentences("my new company's name is A! L! E! X!.");
 // [ "my new company's name is A!", "L! E!", "X!." ]
 // Now let's add the transformers:
 lexed.extend.transformer({
@@ -38,7 +38,7 @@ lexed.extend.transformer({
 	}
 });
 // calling the same function with the same input:
-const afterExtending = lexed.sentence("my new company's name is A! L! E! X!.");
+const afterExtending = lexed.sentences("my new company's name is A! L! E! X!.");
 // [ "my new company's name is A! L! E! X!." ]
 
 
