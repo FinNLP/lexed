@@ -21,7 +21,7 @@ This lexer can be used for both:
 ```javascript
 
 const lexed = require("lexed");
-const result = lexed.sentence('Sentece one. Sentece two! sentence 3? sentence "four." Sentece Five. Microsoft Co. released windows 10');
+const result = lexed.sentences('Sentece one. Sentece two! sentence 3? sentence "four." Sentece Five. Microsoft Co. released windows 10');
 console.log(result);
 // would give the following array:
 [
