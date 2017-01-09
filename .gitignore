@@ -13,4 +13,4 @@ Thumbs.dbma
 /node_modules/*
 *.log
 .jshintrc
-legacy.js
+diagnosis.json
