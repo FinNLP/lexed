@@ -9,7 +9,7 @@
 **/
 
 const lexed = require("../lib/index.js");
-var beforeExtending = lexed.token("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
+var beforeExtending = lexed.tokens("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
 // ["Sia","'","s","song","`","The","Greatest","`","begins","with","the","#","WeAreTheChildren","hash","tag","."]
 // Now let's add the transformers:
 lexed.extend.transformer({
@@ -51,7 +51,7 @@ lexed.extend.transformer({
 	}
 });
 // calling the same function with the same input:
-var afterExtending = lexed.token("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
+var afterExtending = lexed.tokens("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
 // [ "Sia","'","s","song","`","The","Greatest","`","begins","with","the","#WeAreTheChildren","hash","tag","." ];
 
 
