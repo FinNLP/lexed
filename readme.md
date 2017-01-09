@@ -42,7 +42,7 @@ console.log(result);
 
 ```javascript
 const lexed = require("lexed");
-const result = lexed.token('Microsoft Co. released windows 10');
+const result = lexed.tokens('Microsoft Co. released windows 10');
 console.log(result);
 // would give the following object:
 {
