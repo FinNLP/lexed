@@ -2,12 +2,6 @@ const lexed = require("../lib/index.js");
 const sampleData = require("./penn-treebank-sample.json");
 lexed.english();
 
-/*
-console.log(lexed.tokens(""));
-return;
-*/
-
-
 var correct = 0;
 var missed = 0;
 var total = 0;

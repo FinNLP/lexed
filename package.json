@@ -1,6 +1,6 @@
 {
   "name": "lexed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Multi-lingual, extensible word and sentence tokenizer and lexer, for natural language processing.",
   "main": "./lib/index.js",
   "directories": {
@@ -20,12 +20,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexcorvi/lexed.git"
+    "url": "git+https://github.com/finnlp/lexed.git"
   },
   "bugs": {
-    "url": "https://github.com/alexcorvi/lexed/issues"
+    "url": "https://github.com/finnlp/lexed/issues"
   },
-  "homepage": "https://github.com/alexcorvi/lexed#readme",
+  "homepage": "https://github.com/finnlp/lexed#readme",
   "dependencies": {
     "escape-string-regexp": "^1.0.5"
   }

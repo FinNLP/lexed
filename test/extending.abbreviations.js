@@ -23,11 +23,6 @@ const afterExtending = lexed.sentences("M. et Mme. Pierre Dubois sont allés à 
 
 
 
-
-
-
-
-
 // EXAMPLE ENDS HERE ----------- the following are assertion test
 const assert = require("assert");
 describe('Extending the abbreviations', function () {
