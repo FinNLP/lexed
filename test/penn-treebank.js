@@ -10,7 +10,8 @@ var diagnosis = [];
 describe('Penn Treebank test', function () {
 	it('description', function () {
 		this.timeout(Infinity);
-		sampleData.forEach((input)=>{
+		sampleData.forEach((input,i)=>{
+			if(i%1000 === 0) console.log("		-",i);
 			lexed.tokens(input.sentence).tokens.forEach((token,index,tokensArr)=>{
 				total++;
 				if(
