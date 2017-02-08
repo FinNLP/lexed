@@ -55,13 +55,14 @@ var afterExtending = new Lexed("Sia's song `The Greatest` begins with the #WeAre
 // [ "Sia","'","s","song","`","The","Greatest","`","begins","with","the","#WeAreTheChildren","hash","tag","." ];
 
 
+
 /// EXAMPLE ENDS HERE ----------- the following are assertion test
 const assert = require("assert");
-describe('Extending the sentence transformers', function () {
+describe('Extending the token transformers', function () {
 	it('Before extending', function () {
-		assert.equal(beforeExtending.length,16);
+		assert.equal(!!beforeExtending.find(x=>x==="#WeAreTheChildren"),false);
 	});
 	it('After extending', function () {
-		assert.equal(afterExtending.length,15);
+		assert.equal(!!afterExtending.find(x=>x==="#WeAreTheChildren"),true);
 	});
 });

@@ -7,20 +7,19 @@
 **/
 
 const Lexed = require("../dist/index.js").Lexed;
-const beforeExtending = new Lexed("M. et Mme. Pierre Dubois sont allés à la tribune hier soir.").sentenceLevel();
+const beforeExtending = new Lexed("Alex et ADA. Pierre Dubois sont allés à la tribune hier soir.").sentenceLevel();
 /**
  * The above will be equal to
  * ["M. et Mme.","Pierre Dubois sont allés à la tribune hier soir."]
 **/
 // Now let's add the abbreviations:
-Lexed.extend.abbreviations(["m","mme"]);
+Lexed.extend.abbreviations(["m","ada"]);
 // Note: The abbreviations should be passed as an array
 // and when detected, the detection will be case-insensitive
 // calling the same function with the same input:
-const afterExtending = new Lexed("M. et Mme. Pierre Dubois sont allés à la tribune hier soir.").sentenceLevel();
+const afterExtending = new Lexed("Alex et ADA. Pierre Dubois sont allés à la tribune hier soir.").sentenceLevel();
 // The above will be equal to
 // ["M. et Mme. Pierre Dubois sont allés à la tribune hier soir."]
-
 
 
 // EXAMPLE ENDS HERE ----------- the following are assertion test
