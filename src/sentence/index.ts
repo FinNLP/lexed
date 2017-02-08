@@ -20,7 +20,7 @@ export default function(str:string):Array<string>{
 	str = extensions.initial(str);
 
 	let sentences =<Array<string>> [];
-	let arr = str.split(/(\S.+?[….\?!\n])(?=\s+|$|")/);
+	let arr = str.split(/(\S.+?[….\?!\n])(?=\s+|$|"|'|\))/);
 	arr.forEach((single,index)=>{
 		single = single.trim();
 		if(new RegExp("(^| |\\\(|\\\[|\{)(" + abbreviations.list.map(regexEscape).join("|") + ")[\.!\?] ?$", "i").test(single) || /[ |\.][A-Za-z]\.?$/.test(single)) {
@@ -53,8 +53,8 @@ export default function(str:string):Array<string>{
 	sentences.forEach((item,index)=>{
 		if(
 			sentences[index+1] &&
-			/^('|"|]|}|>|\/|\|`|"|\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）) /.test(sentences[index+1]) &&
-			new RegExp(`${regexEscape(item)}('|"|]|}|>|\\\/|\|\\\`|"|\\\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）) `).test(str)
+			/^('|"|]|}|\)|>|\/|\|`|"|\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）) /.test(sentences[index+1]) &&
+			new RegExp(`${regexEscape(item)}('|"|]|\\\)|}|>|\\\/|\|\\\`|"|\\\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）) `).test(str)
 		){
 			sentences[index] = sentences[index] + sentences[index+1].charAt(0);
 			sentences[index+1] = sentences[index+1].substr(2);
@@ -66,8 +66,8 @@ export default function(str:string):Array<string>{
 		if(
 			item.length === 1 &&
 			sentences[index-1] &&
-			/^('|"|]|}|>|\/|\|`|"|\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）)$/.test(item) &&
-			new RegExp(`${sentences[index-1]}('|"|]|}|>|\\\/|\|\\\`|"|\\\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）)\\s`).test(str)
+			/^('|"|]|}|\)|>|\/|\|`|"|\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）)$/.test(item) &&
+			new RegExp(`${regexEscape(sentences[index-1])}('|"|]|\\\)|}|>|\\\/|\|\\\`|"|\\\*|”|“|«|»|”|”|」|«|﹂|’|⟧|›|⸥|】|⁆|﴿|｝|〞|｠|〉|》|）)\\s`).test(str)
 		){
 			sentences[index-1] = sentences[index-1] + item;
 			sentences[index] = "";
