@@ -1,6 +1,6 @@
-const lexed = require("../lib/index.js");
+const Lexed = require("../dist/index.js").Lexed;
 const sampleData = require("./penn-treebank-sample.json");
-lexed.english();
+Lexed.extend.english();
 
 var correct = 0;
 var missed = 0;
@@ -12,7 +12,7 @@ describe('Penn Treebank test', function () {
 		this.timeout(Infinity);
 		sampleData.forEach((input,i)=>{
 			if(i%1000 === 0) console.log("		-",i);
-			lexed.tokens(input.sentence).tokens.forEach((token,index,tokensArr)=>{
+			new Lexed(input.sentence).lexer().tokens[0].tokens.forEach((token,index,tokensArr)=>{
 				total++;
 				if(
 					token === input.tokens[index] ||

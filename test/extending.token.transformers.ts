@@ -8,11 +8,11 @@
  *
 **/
 
-const lexed = require("../lib/index.js");
-var beforeExtending = lexed.tokens("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
+const Lexed = require("../dist/index.js").Lexed;
+var beforeExtending = new Lexed("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").lexer().tokens[0].tokens;
 // ["Sia","'","s","song","`","The","Greatest","`","begins","with","the","#","WeAreTheChildren","hash","tag","."]
 // Now let's add the transformers:
-lexed.extend.transformer({
+Lexed.extend.transformers({
 	// since we're adding a token level transformer
 	// we'll set the level to: token
 	level:"token",
@@ -51,10 +51,8 @@ lexed.extend.transformer({
 	}
 });
 // calling the same function with the same input:
-var afterExtending = lexed.tokens("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").tokens;
+var afterExtending = new Lexed("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").lexer().tokens[0].tokens;
 // [ "Sia","'","s","song","`","The","Greatest","`","begins","with","the","#WeAreTheChildren","hash","tag","." ];
-
-
 
 
 /// EXAMPLE ENDS HERE ----------- the following are assertion test

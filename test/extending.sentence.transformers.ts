@@ -8,11 +8,11 @@
  *
 **/
 
-const lexed = require("../lib/index.js");
-const beforeExtending = lexed.sentences("my new company's name is A! L! E! X!.");
+const Lexed = require("../dist/index.js").Lexed;
+const beforeExtending = new Lexed("my new company's name is A! L! E! X!.").sentenceLevel();
 // [ "my new company's name is A!", "L! E!", "X!." ]
 // Now let's add the transformers:
-lexed.extend.transformer({
+Lexed.extend.transformers({
 	// when adding a transformer it should be an object
 	// with three keys
 	// - when: can be "initial" or "final"
@@ -26,7 +26,7 @@ lexed.extend.transformer({
 		return str.split("A! L! E! X!").join("{{{{THE-COMPANY-NAME-HAS-BEEN-TAKEN-OUT-OF-HERE-AND-THIS-IS-JUST-A-LONG-PLACEHOLDER}}}}");
 	}
 });
-lexed.extend.transformer({
+Lexed.extend.transformers({
 	when:"final",
 	level:"sentence",
 	// the [final][sentence] level function
@@ -38,7 +38,7 @@ lexed.extend.transformer({
 	}
 });
 // calling the same function with the same input:
-const afterExtending = lexed.sentences("my new company's name is A! L! E! X!.");
+const afterExtending = new Lexed("my new company's name is A! L! E! X!.").sentenceLevel();
 // [ "my new company's name is A! L! E! X!." ]
 
 
