@@ -13,4 +13,6 @@ Thumbs.dbma
 /node_modules/*
 *.log
 .jshintrc
-diagnosis.json
+diagnosis*
+more_diagnosis*
+*dist
