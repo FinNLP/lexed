@@ -1,10 +1,6 @@
 var lexed = require("../dist/index.js");
 const assert = require("assert");
 
-describe('English', function () {
-	require("./english.ts");
-});
-
 describe('Examples', function () {
 	require("./extending.abbreviations.ts");
 	require("./extending.sentence.transformers.ts");
@@ -14,6 +10,10 @@ describe('Examples', function () {
 
 describe('Tricky cases', function () {
 	require("./tricky.cases.ts");
+});
+
+describe('English', function () {
+	require("./english.ts");
 });
 
 describe('Penn Treebank', function () {
