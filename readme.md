@@ -96,8 +96,8 @@ What you can extend is:
 
 The following examples will introduce you to the API and how you can write your own extensions:
 
-- [Example (1): Extending the abbreviations list](https://github.com/alexcorvi/lexed/blob/master/test/extending.abbreviations.js)
-- [Example (1): Extending the sentence level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.sentence.transformers.js)
+- [Example (1): Extending the abbreviations list](https://github.com/alexcorvi/lexed/blob/master/test/extending.abbreviations.ts)
+- [Example (1): Extending the sentence level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.sentence.transformers.ts)
 
 
 #### Extending the token level lexer
@@ -112,7 +112,7 @@ What you can extend is:
 
 The following example will introduce you to the API and how you can write your own extensions:
 
-- [Example: Extending the token level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.token.transformers.js)
+- [Example: Extending the token level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.token.transformers.ts)
 
 
 You can see how the **lexed** library is actually just a framework (if this word applies here) to handle your transformations processes, an by it's own it would be really bad lexer. However, being able to hook your own rules will empower you and give you more control over the lexication process.
