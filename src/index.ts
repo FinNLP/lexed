@@ -1,11 +1,11 @@
-import sentenceLexer from "./sentence/index";
-import tokenLexer  from "./token/index";
-import {abbreviations}  from "./abbreviations";
 import {ResultObject} from "./token/index";
-import {tokenExtensions} from "./token/extensions";
-import {sentenceExtensions} from "./sentence/extensions";
-import englishExtensions from "./english/transformers";
+import {abbreviations}  from "./abbreviations";
 import englishAbbreviations from "./english/abbreviations";
+import englishExtensions from "./english/transformers";
+import {sentenceExtensions} from "./sentence/extensions";
+import sentenceLexer from "./sentence/index";
+import {tokenExtensions} from "./token/extensions";
+import tokenLexer  from "./token/index";
 
 export interface Extension {
 	level:string,
