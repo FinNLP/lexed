@@ -13,6 +13,12 @@ export interface Extension {
 	transformer:Function
 }
 
+export interface WholeResult {
+	tokens:Array<ResultObject>,
+	sentences:string[],
+	input:string
+}
+
 export class Lexed {
 	public input:string
 	public tokens:Array<ResultObject>
@@ -22,19 +28,19 @@ export class Lexed {
 		this.input = input;
 	}
 
-	public sentenceLevel = function(){
+	public sentenceLevel = function():Array<string>{
 		this.sentences =<Array<string>> sentenceLexer(this.input);
 		return this.sentences;
 	}
 
-	public tokenLevel = function(){
+	public tokenLevel = function():Array<ResultObject>{
 		this.tokens =<Array<ResultObject>> this.sentences.map((sentence:string)=>{
 			return tokenLexer(sentence);
 		});
 		return this.tokens;
 	}
 
-	public lexer = function(){
+	public lexer = function():WholeResult{
 		this.sentenceLevel();
 		this.tokenLevel();
 		return this;
