@@ -1,3 +1,8 @@
+/// <reference path="../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
+const assert = require("assert");
+import {Lexed} from "../src/index";
+
 /**
  *
  * This example adds the "M." and "Mme"
@@ -6,7 +11,6 @@
  * 
 **/
 
-const Lexed = require("../dist/index.js").Lexed;
 const beforeExtending = new Lexed("M. et Mme. Pierre Dubois sont allés à la tribune hier soir.").sentenceLevel();
 /**
  * The above will be equal to
@@ -23,7 +27,6 @@ const afterExtending = new Lexed("M. et Mme. Pierre Dubois sont allés à la tri
 
 
 // EXAMPLE ENDS HERE ----------- the following are assertion test
-const assert = require("assert");
 describe('Extending the abbreviations', function () {
 	it('Before extending', function () {
 		assert.equal(beforeExtending.length,2);

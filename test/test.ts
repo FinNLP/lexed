@@ -1,5 +1,5 @@
-var lexed = require("../dist/index.js");
-const assert = require("assert");
+/// <reference path="../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
 
 describe('Examples', function () {
 	require("./extending.abbreviations.ts");

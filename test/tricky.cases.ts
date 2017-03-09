@@ -1,5 +1,8 @@
-const assert = require('assert');
-const Lexed = require("../dist/index.js").Lexed;
+/// <reference path="../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
+const assert = require("assert");
+import {Lexed} from "../src/index";
+
 const S1 = new Lexed("This is a quote \"Quote here.\" And this is another sentence.").sentenceLevel();
 const S2 = new Lexed("This is a quote 'Quote here.' And this is another sentence.").sentenceLevel();
 const S3 = new Lexed("This is a quote (Quote here.) And this is another sentence.").sentenceLevel();

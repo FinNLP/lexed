@@ -1,3 +1,8 @@
+/// <reference path="../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
+const assert = require("assert");
+import {Lexed} from "../src/index";
+
 /**
  * 
  * The following example will prevent the sentence lexer
@@ -8,7 +13,6 @@
  *
 **/
 
-const Lexed = require("../dist/index.js").Lexed;
 const beforeExtending = new Lexed("my new company's name is A! L! E! X!.").sentenceLevel();
 // [ "my new company's name is A!", "L! E!", "X!." ]
 // Now let's add the transformers:
@@ -22,7 +26,7 @@ Lexed.extend.transformers({
 	// - transformer: is the transformer function
 	// which when used on [initial][sentence] level
 	// it receives a string and returns one too.
-	transformer:function(str){
+	transformer:function(str:string){
 		return str.split("A! L! E! X!").join("{{{{THE-COMPANY-NAME-HAS-BEEN-TAKEN-OUT-OF-HERE-AND-THIS-IS-JUST-A-LONG-PLACEHOLDER}}}}");
 	}
 });
@@ -31,8 +35,8 @@ Lexed.extend.transformers({
 	level:"sentence",
 	// the [final][sentence] level function
 	// should receive an array and returns one
-	transformer:function(arr){
-		return arr.map((sentence)=>{
+	transformer:function(arr:string[]){
+		return arr.map((sentence:string)=>{
 			return sentence.split("{{{{THE-COMPANY-NAME-HAS-BEEN-TAKEN-OUT-OF-HERE-AND-THIS-IS-JUST-A-LONG-PLACEHOLDER}}}}").join("A! L! E! X!");
 		});
 	}
@@ -43,7 +47,6 @@ const afterExtending = new Lexed("my new company's name is A! L! E! X!.").senten
 
 
 /// EXAMPLE ENDS HERE ----------- the following are assertion test
-const assert = require("assert");
 describe('Extending the sentence transformers', function () {
 	it('Before extending', function () {
 		assert.equal(beforeExtending.length>1,true);

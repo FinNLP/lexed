@@ -1,14 +1,18 @@
+/// <reference path="../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
+const assert = require("assert");
+import {Lexed} from "../src/index";
+
 /**
  * 
  * The following example will prevent the token lexer
  * form treating the hash symbol "#" as separate token when
- * it's immediatly followed by a word.
+ * it's immediately followed by a word.
  *
  * i.e. detects hash-tags
  *
 **/
 
-const Lexed = require("../dist/index.js").Lexed;
 var beforeExtending = new Lexed("Sia's song `The Greatest` begins with the #WeAreTheChildren hash tag.").lexer().tokens[0].tokens;
 // ["Sia","'","s","song","`","The","Greatest","`","begins","with","the","#","WeAreTheChildren","hash","tag","."]
 // Now let's add the transformers:
@@ -24,7 +28,7 @@ Lexed.extend.transformers({
 	// like adding a space before every non-word
 	// character
 	when:"initial",
-	transformer:function(arr){
+	transformer:function(arr:string[]){
 		return arr.map((token)=>{
 			// detect if it's a hash tag
 			if(/^\#\w+$/.test(token)) {
@@ -57,7 +61,6 @@ var afterExtending = new Lexed("Sia's song `The Greatest` begins with the #WeAre
 
 
 /// EXAMPLE ENDS HERE ----------- the following are assertion test
-const assert = require("assert");
 describe('Extending the token transformers', function () {
 	it('Before extending', function () {
 		assert.equal(!!beforeExtending.find(x=>x==="#WeAreTheChildren"),false);
