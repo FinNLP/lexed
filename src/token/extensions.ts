@@ -1,6 +1,6 @@
 export interface TokenObject {
-	token:string,
-	meta:any
+	token:string;
+	meta:any;
 }
 
 export const tokenExtensions = {
@@ -26,4 +26,4 @@ export const tokenExtensions = {
 		}
 		return input;
 	}
-}
+};

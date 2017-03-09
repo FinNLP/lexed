@@ -1,9 +1,9 @@
 export interface WrapperDefinition {
-	a:string,
-	z:string,
-	test?:RegExp,
-	replace?:RegExp,
-	to?:string
+	a:string;
+	z:string;
+	test?:RegExp;
+	replace?:RegExp;
+	to?:string;
 }
 
 const list =<Array<WrapperDefinition>> [

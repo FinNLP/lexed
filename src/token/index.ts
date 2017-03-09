@@ -4,8 +4,8 @@ import {tokenExtensions as extensions} from "./extensions";
 import {TokenObject as TokenObject} from "./extensions";
 
 export interface ResultObject {
-	meta:Array<any>
-	tokens:Array<string>
+	meta:Array<any>;
+	tokens:Array<string>;
 }
 
 export default function(input:string):ResultObject{
