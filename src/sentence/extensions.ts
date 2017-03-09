@@ -21,4 +21,4 @@ export const sentenceExtensions = {
 		}
 		return input;
 	}
-}
+};
