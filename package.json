@@ -3,7 +3,7 @@
   "version": "1.0.9",
   "description": "Multi-lingual, extensible word and sentence tokenizer and lexer, for natural language processing.",
   "main": "./dist/index.js",
-  "types":"./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "directories": {
     "test": "test"
   },
