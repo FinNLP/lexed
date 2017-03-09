@@ -8,43 +8,43 @@ import {tokenExtensions} from "./token/extensions";
 import tokenLexer  from "./token/index";
 
 export interface Extension {
-	level:string,
-	when:string,
-	transformer:Function
+	level:string;
+	when:string;
+	transformer:Function;
 }
 
 export interface WholeResult {
-	tokens:Array<ResultObject>,
-	sentences:string[],
-	input:string
+	tokens:Array<ResultObject>;
+	sentences:string[];
+	input:string;
 }
 
 export class Lexed {
-	public input:string
-	public tokens:Array<ResultObject>
-	public sentences:Array<string>
+	public input:string;
+	public tokens:Array<ResultObject>;
+	public sentences:Array<string>;
 
 	constructor(input:string){
 		this.input = input;
-	}
+	};
 
 	public sentenceLevel = function():Array<string>{
 		this.sentences =<Array<string>> sentenceLexer(this.input);
 		return this.sentences;
-	}
+	};
 
 	public tokenLevel = function():Array<ResultObject>{
 		this.tokens =<Array<ResultObject>> this.sentences.map((sentence:string)=>{
 			return tokenLexer(sentence);
 		});
 		return this.tokens;
-	}
+	};
 
 	public lexer = function():WholeResult{
 		this.sentenceLevel();
 		this.tokenLevel();
 		return this;
-	}
+	};
 
 	static extend = {
 		
@@ -64,7 +64,7 @@ export class Lexed {
 
 		sentenceExtensions:sentenceExtensions,
 		tokenExtensions:tokenExtensions.initialExtensions,
-	}
+	};
 }
 
 export default Lexed;
