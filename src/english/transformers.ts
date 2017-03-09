@@ -18,10 +18,12 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			var year = /^((\d{4})('s))((\W+)*)$/i;
 			var range = /((('\d+)|\d+)0s)((\W+)*)$/;
-			return arr.reduce((newArr:Array<string|TokenObject>,token)=>{
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				let token = arr[index];
 				if(typeof token !== "string") newArr.push(token);
 				else if(range.test(token)) {
 					token.replace(range,"$1 $4").split(" ").forEach((x,i)=>{
@@ -42,11 +44,10 @@ export default [
 					});
 				}
 				else newArr.push(token);
-				return newArr;
-			},[]);
+			}
+			return newArr;
 		}
 	},
-
 
 
 	/**
@@ -60,12 +61,14 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			var timeAndRatios = /(\d+:\d+)((\W+)*)/;
 			var timeIndicatorWithDot = /((p|a)\.m\.)((\W+)?)/i;
 			var timeIndicatorWithoutDot = /((p|a)\.m)((\W+)?)/i;
 			var timeWithOptionalSeconds = /^(([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]((:[0-5][0-9])?))((\W+)*)$/;
-			return arr.reduce((newArr:Array<string|TokenObject>,token,index)=>{
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				const token = arr[index];
 				if(typeof token !== "string") newArr.push(token);
 				else if(timeWithOptionalSeconds.test(token)) {
 					token.replace(timeWithOptionalSeconds,"$1 $5").split(" ").forEach((x,i)=>{
@@ -96,8 +99,8 @@ export default [
 					});
 				}
 				else newArr.push(token);
-				return newArr;
-			},[]);
+			}
+			return newArr;
 		}
 	},
 
@@ -109,13 +112,15 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			var complexWord = /^(((\w+)*(\-|\/)\w+)+)((\W+)*)$/; // geo-location
 			var acronymComplexWord1 = /^((([A-Z]\.)+)(((\w+)*(\-|\/)\w+)+))((\W+)*)$/; // T.F.-based
 			var acronymComplexWord2 = /((((\w+)*(\-|\/))+)(([A-Z]\.)+))((\W+)*)$/; // Canadian-U.S.
 			var complexWordsWithNumbers = /^(([^\d]+)*((\d{1,3})+(,\d{3})*(\.\d+)?)+(([\W]+\w+)+))((\W+)*)$/; // 4.9%-held
-			return arr
-			.reduce((newArr:Array<string|TokenObject>,token)=>{
+
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				const token = arr[index];
 				if(typeof token !== "string") newArr.push(token);
 				else if(complexWord.test(token)) token.replace(complexWord,"$1 $5").split(" ").forEach((x,i)=>{
 					if(i&&x) newArr.push(x);
@@ -155,8 +160,8 @@ export default [
 					});
 				});
 				else newArr.push(token);
-				return newArr;
-			},[]);
+			};
+			return newArr;
 		}
 	},
 
@@ -168,8 +173,10 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
-			return arr.reduce((newArr:Array<string|TokenObject>,token)=>{
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				var token = arr[index];
 				if(typeof token !== "string") newArr.push(token);
 				else if(/^--$/.test(token)) newArr.push({token:token,meta:{midSentencePunct:true,specialPunct:true}});
 				else if(/^([^\.]+)*((\.){2,})$/.test(token)) {
@@ -182,8 +189,8 @@ export default [
 					});
 				}
 				else newArr.push(token);
-				return newArr;
-			},[]); 
+			};
+			return newArr; 
 		}
 	},
 
@@ -197,20 +204,24 @@ export default [
 	{
 		when:"initial",
 		level:"token",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			var numAndSymb = /^([^\d]+)*((\d{1,3})+(,\d{3})*(\.\d+)?)+([^\d]+)*/;
 			var orders = /^((\d+)*(1st|2nd|3rd|\dth))((\W+)*)$/i;
 			var hyphenedOrders = /((\w+)*)(\'\d+)((\W+)?)/;
-			return arr
-			.reduce((newArr:Array<string|TokenObject>,token,index,tokensArr)=>{
-				if(typeof token !== "string") newArr.push(token);
-				else if(orders.test(token)) token.replace(orders,"$1 $4").split(" ").forEach((x,i)=>{
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				var token = arr[index];
+				if(typeof token !== "string") {
+					newArr.push(token);
+					continue;
+				}
+				else if(typeof token === "string" && orders.test(token)) token.replace(orders,"$1 $4").split(" ").forEach((x,i)=>{
 					if(x&&i) newArr.push(x);
 					else newArr.push({
 						token:x,
 						meta:{
 							order:true,
-							value:parseFloat(token.replace(/^([^\d]*)(\d+)([^\d]*)$/,"$2").trim())
+							value:parseFloat((token as string).replace(/^([^\d]*)(\d+)([^\d]*)$/,"$2").trim())
 						}
 					});
 				});
@@ -226,7 +237,7 @@ export default [
 				});
 				else if(numAndSymb.test(token)) token.replace(numAndSymb,"$1 $2 $6").split(" ").forEach((x,i,arr)=>{
 					if(i===1) {
-						var unit = (arr[0]||arr[2]||tokensArr[index+1]||tokensArr[index-1]||"");
+						var unit = (arr[0]||arr[2]||newArr[index+1]||newArr[index-1]||"");
 						if(typeof unit === "string") unit = unit.replace(/\W/,"");
 						else unit = unit.token;
 						newArr.push({
@@ -241,8 +252,8 @@ export default [
 					else if(x) newArr.push(x);
 				});
 				else newArr.push(token);
-				return newArr;
-			},[]);
+			};
+			return newArr;
 		}
 	},
 
@@ -256,43 +267,34 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
-			return arr
-			.map((token)=>{
-				var POS = /((\w+)*)('s)((\W+)*)$/;
-				var simple = /^((\w+)*)('ll|'m|'re|'ve|'d|'clock)((\W+)*)$/i;
-				var negation = /^(do|does|did|ca|could|sha|should|are|were|wo|would|have|had|has|is|was|might|ai)(n't)((\W+)*)$/i;
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 
-				if(typeof token === "object") return token;
+			var POS = /((\w+)*)('s)((\W+)*)$/;
+			var simple = /^((\w+)*)('ll|'m|'re|'ve|'d|'clock)((\W+)*)$/i;
+			var negation = /^(do|does|did|ca|could|sha|should|are|were|wo|would|have|had|has|is|was|might|ai)(n't)((\W+)*)$/i;
+			let newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				var token = arr[index];
+				if(typeof token === "object") newArr.push(token);
 				else if(POS.test(token)) {
 					if(token === token.toUpperCase()) {
 						var sentence = arr.filter((x:string)=>x.length).join("");
-						if(sentence === sentence.toUpperCase()) return token.replace(POS,"$1 $3 $4");
-						else return token.replace(/^([A-Z0-9]+'s)(\W+)*$/," $1 $2");
+						if(sentence === sentence.toUpperCase()) newArr.push.apply(newArr,token.replace(POS,"$1 $3 $4").split(" "));
+						else newArr.push.apply(newArr,token.replace(/^([A-Z0-9]+'s)(\W+)*$/," $1 $2").split(" "));
 					}
-					else return token.replace(POS,"$1 $3 $4");
+					else newArr.push.apply(newArr,token.replace(POS,"$1 $3 $4").split(" "));
 				}
-				else if(simple.test(token)) return token.replace(simple,"$1 $3 $4");
-				else if(negation.test(token))  return token.replace(negation,"$1 $2 $3");
-				else if(/^s'$/i.test(token)) return {token:token,meta:{POS:true}};
-				else if(/^ol'$/i.test(token.toLowerCase())) return {token:token,meta:{contraction:true}};
-				else return token;
-			})
-			.reduce((newArr:Array<string|TokenObject>,item)=>{
-				if(typeof item !== "string") newArr.push(item); 
-				else if(!~item.indexOf(" ")) newArr.push(item);
-				else {
-					item.split(" ").forEach((x,i)=>{
-						if(i===1) newArr.push({token:x,meta:{contraction:true}});
-						else newArr.push(x);
-					});
-				}
-				return newArr;
-			},[])
-			.filter(x=>{
+				else if(simple.test(token)) newArr.push.apply(newArr,token.replace(simple,"$1 $3 $4").split(" "));
+				else if(negation.test(token)) newArr.push.apply(newArr,token.replace(negation,"$1 $2 $3").split(" "));
+				else if(/^s'$/i.test(token)) newArr.push({token:token,meta:{POS:true}});
+				else if(/^ol'$/i.test(token.toLowerCase())) newArr.push({token:token,meta:{contraction:true}});
+				else newArr.push(token);
+			}
+			newArr = newArr.filter(x=>{
 				if(typeof x === "string") return x.length;
 				else return x.token.length;
 			});
+			return newArr;
 		}
 	},
 
@@ -305,7 +307,7 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			return arr.reduce((newArr:Array<string|TokenObject>,token,index)=>{
 				var regexGreedy = new RegExp(`^((${abbreviations.list.map(escRegExp).join("|")})\\.)((\\W+)*)$`,'i');
 				var regexNONGreedy = new RegExp(`^((${abbreviations.list.map(escRegExp).join("|")}))((\\W+)*)$`,'i');
@@ -348,14 +350,16 @@ export default [
 	{
 		level:"token",
 		when:"initial",
-		transformer:function(arr:Array<string|TokenObject>){
+		transformer:function(arr:Array<string|TokenObject>):Array<string|TokenObject>{
 			var singleLetterAcronyms = /^([A-Z])(,*)$/;
 			var pureAcronyms = /^(([A-Z]\.)+)((\W+)*)$/;
 			var unusualNames = /^((([A-Z0-9])+[&!@#$%+-]+([A-Z0-9]){0,})+)((\W+)*)$/;
 			var acronymsAndUnusualNamesGREEDY = /^(([A-Z0-9s].[\w.]*)+)((\W+)*)$/; // includes the "."
 			var acronymsAndUnusualNamesNonGreedy = /^(([A-Z0-9].[\w.]??[A-Z0-9s]?)+)((\W+)*)$/; // doesn't include the last "."
 			var capsNames = /^(([A-Z]|\d)+)((\W+)*)$/;
-			return arr.reduce((newArr:Array<string|TokenObject>,token,index)=>{
+			const newArr:Array<string|TokenObject> = [];
+			for (var index = 0; index < arr.length; index++) {
+				var token = arr[index];
 				if (typeof token !== "string") newArr.push(token);
 				else if(unusualNames.test(token)) token.replace(unusualNames,"$1 $5").split(" ").forEach((x,i)=>{
 					if(x&&i) newArr.push(x);
@@ -413,12 +417,8 @@ export default [
 					else newArr.push({token:x,meta:{caps:true}});
 				});
 				else newArr.push(token);
-				return newArr;
-			},[])
-			.filter(x=>{
-				if(typeof x === "string") return x.length;
-				else return x.token.length;
-			});
+			}
+			return newArr;
 		}
 	}
 ].reverse();
