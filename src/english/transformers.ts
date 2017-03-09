@@ -162,7 +162,7 @@ export default [
 
 
 	/**
-	 * Special punctuations, those punctuations should be considered as one
+	 * Special punctuation, those punctuation should be considered as one
 	 * Example: -- and ...
 	**/
 	{
@@ -349,11 +349,11 @@ export default [
 		level:"token",
 		when:"initial",
 		transformer:function(arr:Array<string|TokenObject>){
-			var singleLetterAcroynms = /^([A-Z])(,*)$/;
+			var singleLetterAcronyms = /^([A-Z])(,*)$/;
 			var pureAcronyms = /^(([A-Z]\.)+)((\W+)*)$/;
 			var unusualNames = /^((([A-Z0-9])+[&!@#$%+-]+([A-Z0-9]){0,})+)((\W+)*)$/;
 			var acronymsAndUnusualNamesGREEDY = /^(([A-Z0-9s].[\w.]*)+)((\W+)*)$/; // includes the "."
-			var acronymsAndUnusualNamesNONGREEDY = /^(([A-Z0-9].[\w.]??[A-Z0-9s]?)+)((\W+)*)$/; // doesn't include the last "."
+			var acronymsAndUnusualNamesNonGreedy = /^(([A-Z0-9].[\w.]??[A-Z0-9s]?)+)((\W+)*)$/; // doesn't include the last "."
 			var capsNames = /^(([A-Z]|\d)+)((\W+)*)$/;
 			return arr.reduce((newArr:Array<string|TokenObject>,token,index)=>{
 				if (typeof token !== "string") newArr.push(token);
@@ -361,8 +361,8 @@ export default [
 					if(x&&i) newArr.push(x);
 					else newArr.push({token:x,meta:{pos:"NNP",properNoun:true}});
 				});
-				else if(singleLetterAcroynms.test(token)) {
-					token.replace(singleLetterAcroynms,"$1 $2").split(" ").forEach((x,i)=>{
+				else if(singleLetterAcronyms.test(token)) {
+					token.replace(singleLetterAcronyms,"$1 $2").split(" ").forEach((x,i)=>{
 						if(x&&i) newArr.push(x);
 						else newArr.push({token:x,meta:{}});
 					});
@@ -399,7 +399,7 @@ export default [
 						}
 					}
 				});
-				else if(acronymsAndUnusualNamesNONGREEDY.test(token)) token.replace(acronymsAndUnusualNamesNONGREEDY,"$1 $3").split(" ").forEach((x,i)=>{
+				else if(acronymsAndUnusualNamesNonGreedy.test(token)) token.replace(acronymsAndUnusualNamesNonGreedy,"$1 $3").split(" ").forEach((x,i)=>{
 					if(x&&i) newArr.push(x);
 					else {
 						var obj = {token:x,meta:{acronym:false,properNoun:false}};
