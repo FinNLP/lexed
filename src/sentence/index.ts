@@ -1,10 +1,6 @@
-import closingWrappers from "../wrappers";
 import {abbreviations} from "../abbreviations";
 import regexEscape from "../escape_regex";
 import {sentenceExtensions as extensions} from "./extensions";
-
-let wrappers = closingWrappers.map(x=>x.z);
-
 
 export default function(str:string):Array<string>{
 
