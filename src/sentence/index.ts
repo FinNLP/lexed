@@ -13,7 +13,7 @@ export default function(str:string):Array<string>{
 	 * The sentence lexer has been adopted from
 	 * Xav Ulflander's amazing compendium-js.
 	 * https://github.com/Ulflander/compendium-js/blob/master/src/lexer.js#L5
-	 * Then it was refractored & optimized for performance and readability.
+	 * Then it was refactored & optimized for performance and readability.
 	 * 
 	**/
 
