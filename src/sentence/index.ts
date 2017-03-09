@@ -1,5 +1,5 @@
 import closingWrappers from "../wrappers";
-import {abbreviations} from "../abbreviations.js";;
+import {abbreviations} from "../abbreviations";
 import regexEscape from "../escape_regex";
 import {sentenceExtensions as extensions} from "./extensions";
 
