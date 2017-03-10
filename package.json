@@ -8,8 +8,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/test.ts",
-    "build": "tsc"
+    "test": "mocha",
+    "build": "tsc",
+    "prepublish": "mocha && tsc",
+    "penn":"ts-node test/penn-treebank.ts"
   },
   "keywords": [
     "lexer",
