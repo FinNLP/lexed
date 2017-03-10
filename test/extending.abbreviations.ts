@@ -2,6 +2,10 @@
 /// <reference path="../node_modules/@types/mocha/index.d.ts"/>
 const assert = require("assert");
 import {Lexed} from "../src/index";
+import {abbreviations} from "../src/index";
+
+// empty all existing abbreviations
+while (abbreviations.length) {abbreviations.pop();}
 
 /**
  *
@@ -17,7 +21,7 @@ const beforeExtending = new Lexed("M. et Mme. Pierre Dubois sont allés à la tr
  * ["M. et Mme.","Pierre Dubois sont allés à la tribune hier soir."]
 **/
 // Now let's add the abbreviations:
-Lexed.extend.abbreviations(["m","mme"]);
+abbreviations.push("m","mme");
 // Note: The abbreviations should be passed as an array
 // and when detected, the detection will be case-insensitive
 // calling the same function with the same input:
