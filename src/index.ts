@@ -35,4 +35,4 @@ export class Lexed {
 }
 
 export default Lexed;
-export const extend = Lexed.extend;
+export {abbreviations};
