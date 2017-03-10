@@ -1,17 +1,6 @@
-import {ResultObject} from "./token/index";
-import {abbreviations}  from "./abbreviations";
-import englishAbbreviations from "./english/abbreviations";
-import englishExtensions from "./english/transformers";
-import {sentenceExtensions} from "./sentence/extensions";
-import sentenceLexer from "./sentence/index";
-import {tokenExtensions} from "./token/extensions";
-import tokenLexer  from "./token/index";
-
-export interface Extension {
-	level:string;
-	when:string;
-	transformer:Function;
-}
+import abbreviations from "./abbreviations";
+import sentenceLexer from "./sentence_level";
+import tokenLexer  from "./token_level";
 
 export interface WholeResult {
 	tokens:Array<ResultObject>;
