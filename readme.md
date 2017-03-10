@@ -24,15 +24,15 @@ const Lexed = require("lexed").Lexed;
 // or ES6 imports
 import Lexed from "lexed";
 
-const result = new Lexed('Sentece one. Sentece two! sentence 3? sentence "four." Sentece Five. Microsoft Co. released windows 10').sentenceLevel();
+const result = new Lexed('Sentence one. Sentence two! sentence 3? sentence "four." Sentence Five. Microsoft Co. released windows 10').sentenceLevel();
 console.log(result);
 // would give the following array:
 [
-	'Sentece one.',
-	'Sentece two!',
+	'Sentence one.',
+	'Sentence two!',
 	'sentence 3?',
 	'sentence "four."',
-	'Sentece Five.',
+	'Sentence Five.',
 	'Microsoft Co. released windows 10'
 ];
 ```
