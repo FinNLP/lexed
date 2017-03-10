@@ -1,5 +1,5 @@
 # Lexed
-Multi-lingual, extensible word and sentence tokenizer, for natural language processing.
+English word and sentence tokenizer, for natural language processing.
 
 ## Installation
 
@@ -21,6 +21,9 @@ This lexer can be used for both:
 ```javascript
 
 const Lexed = require("lexed").Lexed;
+// or ES6 imports
+import Lexed from "lexed";
+
 const result = new Lexed('Sentece one. Sentece two! sentence 3? sentence "four." Sentece Five. Microsoft Co. released windows 10').sentenceLevel();
 console.log(result);
 // would give the following array:
@@ -30,103 +33,71 @@ console.log(result);
 	'sentence 3?',
 	'sentence "four."',
 	'Sentece Five.',
-	'Microsoft Co.',
-	'released windows 10'
+	'Microsoft Co. released windows 10'
 ];
 ```
-
-> For Obvious reasons, the example above demonstrates how **lexed** core library isn't smart enough on it's own, since it didn't recognize that the `.` when preceded by Co. shouldn't be treated as full stopper.
-> However, this is the behavior you should be expecting when using a multi-lingual lexer, since those type of detections are language specific, so the issue should be solved by adding extensions. As you will see later.
 
 ### Sentence and token level
 
 ```javascript
 const Lexed = require("lexed").Lexed;
+// or ES6 imports
+import Lexed from "lexed";
+
 const result = new Lexed('Microsoft Co. released windows 10').lexer().tokens;
 console.log(result);
 // would give the following object:
-[{
-	tokens:[
+[
+	[
 		'Microsoft',
-		'Co',
-		'.'
+		'Co.'
 		'released',
 		'windows',
 		'10'
 	],
-	raw:"Microsoft Co. released windows 10",
-	meta:[null,null,null,null,null],
-}];
+];
 ```
-> Again, the example above would really benefit from language specific rules that we'll show how to add later.
 
 ## Extensibility
 
-If you're planning to only process english language sentences then you can skip this part and use the built-in english extensions like this:
+Currently there's not much to extend in the lexer. Except the abbreviations list.
+
+The abbreviations list is used to detect dots `.` that are not really a full stop for a sentence.
+
+For example the following sentence: `Mr. Andrews went to the office`, if `Mr` isn't registered as an abbreviation, then it the string would be considered two sentences:
+
+- `Mr.`
+- `Andrews went to the office`
+
+Which is obviously inaccurate. However, since `Mr.` _is_ actually registered as an abbreviation, then we'll get one sentence: `Mr. Andrews went to the office`.
+
+Now if you want to extend the abbreviations list you should import the abbreviations from _Lexed_ library and add/remove values as you wish.
 
 ```javascript
-const Lexed = require("lexed").Lexed;
-Lexed.extend.english();
+const abbreviations = require("lexed").abbreviations;
+// or ES6 imports
+import {abbreviations} from "lexed";
+
+// push new abbreviation
+abbreviations.push("Mmm"); // french for madam
 ```
-
-> __Note__
-> The built-in english extensions are tested against penn-treebank corpus and are 99.5% compliant.
-
-
-### How extensibility works
-
-The only reason I had to write my own lexer library is that I wanted it to be language agnostic, it shouldn't deal with contractions, abbreviations, entity detection, or even email and URL detection. all those detections should be left out for the the extensions that can be added, as they might be language specific or not useful for all of the use cases of this library.
-
-Before starting to write your extensions, you should know how this lexer works.
-
-
-
-#### Extending the sentence level lexer
-
-The following diagram explains the exact steps of the sentence lexer:
-
-![http://puu.sh/tesXh/fa48aaa425.png](http://puu.sh/tesXh/fa48aaa425.png)
-
-What you can extend is:
-
-* The initial sentence level transformers.
-* The Abbreviations list.
-* The final sentence level transformers.
-
-
-The following examples will introduce you to the API and how you can write your own extensions:
-
-- [Example (1): Extending the abbreviations list](https://github.com/alexcorvi/lexed/blob/master/test/extending.abbreviations.ts)
-- [Example (1): Extending the sentence level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.sentence.transformers.ts)
-
-
-#### Extending the token level lexer
-The following diagram explains the exact steps of the token lexer:
-
-![http://puu.sh/teDlL/849870ea9b.png](http://puu.sh/teDlL/849870ea9b.png)
-
-What you can extend is:
-
-* The initial token level transformers.
-* The final token level transformers. 
-
-The following example will introduce you to the API and how you can write your own extensions:
-
-- [Example: Extending the token level transformers](https://github.com/alexcorvi/lexed/blob/master/test/extending.token.transformers.ts)
-
-
-You can see how the **lexed** library is actually just a framework (if this word applies here) to handle your transformations processes, an by it's own it would be really bad lexer. However, being able to hook your own rules will empower you and give you more control over the lexication process.
-
 
 ## Contributing
 
+### Perquisites:
+
+- Mocha (testing framework) installed globally
+- TypeScript (language compiler) installed globally
+- ts-node (typescript) runtime installed globally
+
+### Contributing
+
 * Clone the repository: `git clone https://github.com/alexcorvi/lexed.git`
 * Install dependencies: `cd lexed && npm install`
-* Install Mocha globally: `npm install -g mocha`
-* Install Typescript globally: `npm install -g typescript`
 * ...
-* Build `npm run build`
-* Test `npm run test`
+* Test penn-treebank compliance: `npm run penn`
+* Test the library: `npm run test`
+* Build the library: `npm run build`
 
 ## License
 The MIT License (MIT) - Copyright (c) 2017 Alex Corvi
