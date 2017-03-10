@@ -121,7 +121,7 @@
   },
   {
     "tokens": ["As","for","Sassy",",","which","competes","directly","with","News","Corp.","'s","Seventeen","magazine",",","Mr.","Lang","says","that","in","the","next","two","years","he","will","spend","$","6","million","promoting","and","improving","the","magazine","."],
-    "sentence": "As for Sassy, which competes directly with News Corp. 's Seventeen magazine, Mr. Lang says that in the next two years he will spend $ 6 million promoting and improving the magazine."
+    "sentence": "As for Sassy, which competes directly with News Corp.'s Seventeen magazine, Mr. Lang says that in the next two years he will spend $ 6 million promoting and improving the magazine."
   },
   {
     "tokens": ["Though","Sassy","has","grown","quickly","since","its","debut","in","March","1988",",","it","has","been","the","target","of","conservative","lobbyists","and","skittish","advertisers","who","bristled","at","its","frank","editorial","matter","on","teen-age","problems","."],
@@ -205,7 +205,7 @@
   },
   {
     "tokens": ["The","joint","venture","is","being","undone",",","with","McCall","'s","magazine","being","sold","last","summer","to","the","New","York","Times","Co.","'s","Magazine","Group","for","about","$","80","million",",","and","Time","Warner","agreeing","to","sell","back","its","50","%","interest","in","Working","Woman","and","Working","Mother","to","Mr.","Lang","."],
-    "sentence": "The joint venture is being undone, with McCall's magazine being sold last summer to the New York Times Co. 's Magazine Group for about $ 80 million, and Time Warner agreeing to sell back its 50% interest in Working Woman and Working Mother to Mr. Lang."
+    "sentence": "The joint venture is being undone, with McCall's magazine being sold last summer to the New York Times Co.'s Magazine Group for about $ 80 million, and Time Warner agreeing to sell back its 50% interest in Working Woman and Working Mother to Mr. Lang."
   },
   {
     "tokens": ["Executives","at","Time","Inc.","Magazine","Co.",",","a","subsidiary","of","Time","Warner",",","have","said","the","joint","venture","with","Mr.","Lang","was","n't","a","good","one","."],
@@ -285,7 +285,7 @@
   },
   {
     "tokens": ["Britain","'s","Monopolies","and","Mergers","Commission","Wednesday","cleared","Rhone-Poulenc","S.A.","'s","purchase","of","a","specialty","bulk-chemical","unit","from","Monsanto","Co.",",","saying","the","purchase","was","unlikely","to","have","any","lasting","impact","on","U.K.","industrial","consumers","."],
-    "sentence": "Britain's Monopolies and Mergers Commission Wednesday cleared Rhone-Poulenc S.A. 's purchase of a specialty bulk-chemical unit from Monsanto Co., saying the purchase was unlikely to have any lasting impact on U.K. industrial consumers."
+    "sentence": "Britain's Monopolies and Mergers Commission Wednesday cleared Rhone-Poulenc S.A.'s purchase of a specialty bulk-chemical unit from Monsanto Co., saying the purchase was unlikely to have any lasting impact on U.K. industrial consumers."
   },
   {
     "tokens": ["The","commission",",","which","was","asked","to","study","the","deal","by","the","Department","of","Trade","and","Industry","after","its","announcement","in","February",",","said","the","diversity","of","global","supply","of","chemicals","used","in","making","analgesic","drugs","was","great","enough","to","offset","the","dominant","U.K.","market","share","Rhone-Poulenc","would","gain","through","the","acquisition","."],
@@ -764,7 +764,7 @@
     "sentence": "DIGITAL EQUIPMENT CORP., Maynard, Mass., computer maker, annual sales of $ 12.7 billion, NYSE, had structural damage at its San Francisco sales office but no appreciable damage elsewhere in the area, including its Cupertino plant."
   },
   {
-    "tokens": ["DREYER'S","GRAND","ICE","CREAM","INC.",",","Oakland",",","ice","cream","maker",",","annual","sales","of","$","225","million",",","OTC",",","said","it","is","delivering","ice","cream","wherever","roads","are","passable","."],
+    "tokens": ["DREYER","'S","GRAND","ICE","CREAM","INC.",",","Oakland",",","ice","cream","maker",",","annual","sales","of","$","225","million",",","OTC",",","said","it","is","delivering","ice","cream","wherever","roads","are","passable","."],
     "sentence": "DREYER'S GRAND ICE CREAM INC., Oakland, ice cream maker, annual sales of $ 225 million, OTC, said it is delivering ice cream wherever roads are passable."
   },
   {
@@ -1189,7 +1189,7 @@
   },
   {
     "tokens": ["Lionel","Corp.","'s","board","unanimously","rejected","a","tender","offer","of","$","8","a","share",",","or","$","95.4","million",",","for","as","much","as","90","%","of","Lionel","by","a","group","with","a","9.9","%","stake","in","the","toy","retailer","."],
-    "sentence": "Lionel Corp. 's board unanimously rejected a tender offer of $ 8 a share, or $ 95.4 million, for as much as 90% of Lionel by a group with a 9.9% stake in the toy retailer."
+    "sentence": "Lionel Corp.'s board unanimously rejected a tender offer of $ 8 a share, or $ 95.4 million, for as much as 90% of Lionel by a group with a 9.9% stake in the toy retailer."
   },
   {
     "tokens": ["Lionel","also","urged","holders","of","its","stock","and","debt","not","to","tender","their","securities",",","saying","it","wants","to","remain","independent","to","pursue","its","business","strategy","."],
@@ -5513,7 +5513,7 @@
   },
   {
     "tokens": ["Steve","Jobs","took","a","step","back","from","the","frontier","of","personal-computer","technology","in","an","effort","to","spur","sales","of","Next","Inc.","'s","new","machine","."],
-    "sentence": "Steve Jobs took a step back from the frontier of personal-computer technology in an effort to spur sales of Next Inc. 's new machine."
+    "sentence": "Steve Jobs took a step back from the frontier of personal-computer technology in an effort to spur sales of Next Inc.'s new machine."
   },
   {
     "tokens": ["Mr.","Jobs","moved","to","remedy","a","couple","of","his","computer","'s","drawbacks","yesterday","by","lowering","the","entry-level","price","for","a","Next","machine","by","$","1,500",",","or","23","%",",","if","the","buyer","chooses","a","hard-disk","drive","as","an","alternative","to","Next","'s","optical-storage","device","."],
@@ -6073,7 +6073,7 @@
   },
   {
     "tokens": ["General","Motors","Corp.","'s","Chevrolet","division",",","reacting","to","slow","sales",",","said","it","will","offer","$","800","rebates","on","its","1990","Beretta",",","the","two-door","version","of","its","core","compact-car","line","."],
-    "sentence": "General Motors Corp. 's Chevrolet division, reacting to slow sales, said it will offer $ 800 rebates on its 1990 Beretta, the two-door version of its core compact-car line."
+    "sentence": "General Motors Corp.'s Chevrolet division, reacting to slow sales, said it will offer $ 800 rebates on its 1990 Beretta, the two-door version of its core compact-car line."
   },
   {
     "tokens": ["Sluggish","sales","of","the","Beretta",",","and","its","four-door","sister","car",",","the","Corsica",",","prompted","GM","to","idle","the","two","plants","that","build","the","automobiles","for","a","total","of","three","weeks","this","month","."],
@@ -7377,7 +7377,7 @@
   },
   {
     "tokens": ["Rockwell","International","Corp.","'s","Tulsa","unit","said","it","signed","a","tentative","agreement","extending","its","contract","with","Boeing","Co.","to","provide","structural","parts","for","Boeing","'s","747","jetliners","."],
-    "sentence": "Rockwell International Corp. 's Tulsa unit said it signed a tentative agreement extending its contract with Boeing Co. to provide structural parts for Boeing's 747 jetliners."
+    "sentence": "Rockwell International Corp.'s Tulsa unit said it signed a tentative agreement extending its contract with Boeing Co. to provide structural parts for Boeing's 747 jetliners."
   },
   {
     "tokens": ["Rockwell","said","the","agreement","calls","for","it","to","supply","200","additional","so-called","shipsets","for","the","planes","."],
@@ -7597,7 +7597,7 @@
   },
   {
     "tokens": ["Merck","&","Co.","reported","a","25","%","increase","in","earnings",";","Warner-Lambert","Co.","'s","profit","rose","22","%","and","Eli","Lilly","&","Co.","'s","net","income","rose","24","%","."],
-    "sentence": "Merck & Co. reported a 25% increase in earnings ; Warner-Lambert Co. 's profit rose 22% and Eli Lilly & Co. 's net income rose 24%."
+    "sentence": "Merck & Co. reported a 25% increase in earnings ; Warner-Lambert Co.'s profit rose 22% and Eli Lilly & Co.'s net income rose 24%."
   },
   {
     "tokens": ["The","results","were","in","line","with","analysts","'","expectations","."],
@@ -8145,7 +8145,7 @@
   },
   {
     "tokens": ["The","spy","network","would","serve","two","clients",":","the","Panamanian","government",",","by","monitoring","political","opponents","in","the","region",",","and","the","U.S.",",","by","tracking","the","growing","Communist","influence","in","the","unions","organized","at","United","Fruit","Co.","'s","banana","plantations","in","Bocas","del","Toros","and","Puerto","Armuelles","."],
-    "sentence": "The spy network would serve two clients : the Panamanian government, by monitoring political opponents in the region, and the U.S., by tracking the growing Communist influence in the unions organized at United Fruit Co. 's banana plantations in Bocas del Toros and Puerto Armuelles."
+    "sentence": "The spy network would serve two clients : the Panamanian government, by monitoring political opponents in the region, and the U.S., by tracking the growing Communist influence in the unions organized at United Fruit Co.'s banana plantations in Bocas del Toros and Puerto Armuelles."
   },
   {
     "tokens": ["United","Fruit","was","one","of","the","two","largest","contributors","to","Panama","'s","national","income","."],
@@ -9521,7 +9521,7 @@
   },
   {
     "tokens": ["At","the","same","time",",","there","appears","to","be","a","market","for","news-oriented","programming",";","Turner","Broadcasting","System","Inc.","'s","Cable","News","Network","has","its","highest","ratings",",","outside","of","prime","time",",","on","Saturday","mornings","."],
-    "sentence": "At the same time, there appears to be a market for news-oriented programming ; Turner Broadcasting System Inc. 's Cable News Network has its highest ratings, outside of prime time, on Saturday mornings."
+    "sentence": "At the same time, there appears to be a market for news-oriented programming ; Turner Broadcasting System Inc.'s Cable News Network has its highest ratings, outside of prime time, on Saturday mornings."
   },
   {
     "tokens": ["NBC","has","on","previous","occasions","considered","replacing","cartoons","with","a","Saturday","version","of","'","Today",",","'","which","is","produced","by","NBC","News","."],
@@ -9877,7 +9877,7 @@
   },
   {
     "tokens": ["Those","routes",",","valued","by","the","creditors","'","professionals","at","about","$","400","million",",","were","to","be","sold","to","AMR","Corp.","'s","American","Airlines","."],
-    "sentence": "Those routes, valued by the creditors' professionals at about $ 400 million, were to be sold to AMR Corp. 's American Airlines."
+    "sentence": "Those routes, valued by the creditors' professionals at about $ 400 million, were to be sold to AMR Corp.'s American Airlines."
   },
   {
     "tokens": ["A","last-minute","snag","in","negotiations","with","AMR",",","over","an","unrelated","lawsuit","between","American","and","another","Texas","Air","unit",",","caused","the","deal","to","collapse","."],
@@ -11233,7 +11233,7 @@
   },
   {
     "tokens": ["Some","so-called","high-quality","junk","issues",",","such","as","R.H.","Macy","&","Co.","'s","14","1/2","%","subordinated","debentures",",","rose","."],
-    "sentence": "Some so-called high-quality junk issues, such as R.H. Macy & Co. 's 14 1/2% subordinated debentures, rose."
+    "sentence": "Some so-called high-quality junk issues, such as R.H. Macy & Co.'s 14 1/2% subordinated debentures, rose."
   },
   {
     "tokens": ["The","Macy","'s","issue","closed","up","about","one","point","at","a","bid","price","of","97","."],
@@ -14089,7 +14089,7 @@
   },
   {
     "tokens": ["In","a","move","that","could","pose","a","new","competitive","challenge","to","Time","Warner","Inc.","'s","powerful","Home","Box","Office",",","cable","giant","Tele-Communications","Inc.","agreed","to","buy","half","of","Showtime","Networks","Inc.","from","Viacom","Inc.","for","$","225","million","."],
-    "sentence": "In a move that could pose a new competitive challenge to Time Warner Inc. 's powerful Home Box Office, cable giant Tele-Communications Inc. agreed to buy half of Showtime Networks Inc. from Viacom Inc. for $ 225 million."
+    "sentence": "In a move that could pose a new competitive challenge to Time Warner Inc.'s powerful Home Box Office, cable giant Tele-Communications Inc. agreed to buy half of Showtime Networks Inc. from Viacom Inc. for $ 225 million."
   },
   {
     "tokens": ["The","purchase","comes","after","nearly","three","years","of","on-again","off-again","talks","between","TCI","and","Viacom",",","which","has","also","discussed","the","sale","of","an","interest","in","Showtime","with","other","cable","operators","."],
@@ -14437,7 +14437,7 @@
   },
   {
     "tokens": ["NBC","was","second","with","a","13.9","rating","and","24","share","followed","by","CBS","Inc.","'s","television","network","with","a","12.5","rating","and","21","share","."],
-    "sentence": "NBC was second with a 13.9 rating and 24 share followed by CBS Inc. 's television network with a 12.5 rating and 21 share."
+    "sentence": "NBC was second with a 13.9 rating and 24 share followed by CBS Inc.'s television network with a 12.5 rating and 21 share."
   },
   {
     "tokens": ["(","A","ratings","point","represents","904,000","television","households",";","shares","indicate","the","percentage","of","sets","in","use",".",")"],
@@ -14884,7 +14884,7 @@
     "sentence": "But yesterday's announcement indicates that Ford hasn't lost interest."
   },
   {
-    "tokens": ["Both","Shearson","'s","Mr",".","Will","and","Stephen","Reitman",",","European","auto","analyst","at","the","London","brokerage","firm","UBS-Phillips","&","Drew",",","recently","switched","their","Jaguar","recommendations","to","hold","from","buy","."],
+    "tokens": ["Both","Shearson","'s","Mr.","Will","and","Stephen","Reitman",",","European","auto","analyst","at","the","London","brokerage","firm","UBS-Phillips","&","Drew",",","recently","switched","their","Jaguar","recommendations","to","hold","from","buy","."],
     "sentence": "Both Shearson's Mr. Will and Stephen Reitman, European auto analyst at the London brokerage firm UBS-Phillips & Drew, recently switched their Jaguar recommendations to hold from buy."
   },
   {
@@ -15077,7 +15077,7 @@
   },
   {
     "tokens": ["Microsoft","Corp.","'s","earnings","growth","continued","to","outstrip","that","of","most","of","its","competitors","and","customers","in","the","personal-computer","industry",",","as","it","reported","a","36","%","jump","in","fiscal","first-quarter","earnings","on","a","33","%","revenue","gain","."],
-    "sentence": "Microsoft Corp. 's earnings growth continued to outstrip that of most of its competitors and customers in the personal-computer industry, as it reported a 36% jump in fiscal first-quarter earnings on a 33% revenue gain."
+    "sentence": "Microsoft Corp.'s earnings growth continued to outstrip that of most of its competitors and customers in the personal-computer industry, as it reported a 36% jump in fiscal first-quarter earnings on a 33% revenue gain."
   },
   {
     "tokens": ["The","Redmond",",","Wash.","company",",","a","bellwether","provider","of","operating","systems","and","software","for","personal-computer","makers","and","users",",","reported","net","income","for","the","quarter","ended","Sept.","30","of","$","49.6","million",",","or","87","cents","a","share",",","up","from","$","36.6","million",",","or","65","cents","a","share",",","in","the","year-ago","period","."],
@@ -15529,7 +15529,7 @@
   },
   {
     "tokens": ["Capital","Cities/ABC","Inc.",",","CBS","Inc.","and","General","Electric","Co.","'s","National","Broadcasting","Co.","unit","are","expected","to","announce","soon","a","joint","campaign","to","raise","awareness","about","hunger","."],
-    "sentence": "Capital Cities/ABC Inc., CBS Inc. and General Electric Co. 's National Broadcasting Co. unit are expected to announce soon a joint campaign to raise awareness about hunger."
+    "sentence": "Capital Cities/ABC Inc., CBS Inc. and General Electric Co.'s National Broadcasting Co. unit are expected to announce soon a joint campaign to raise awareness about hunger."
   },
   {
     "tokens": ["The","subject","will","be","written","into","the","plots","of","prime-time","shows",",","and","viewers","will","be","given","a","900","number","to","call","."],
@@ -15573,7 +15573,7 @@
   },
   {
     "tokens": ["Each","weekday","matches","a","sponsor","and","a","topic",":","On","Mondays",",","Unilever","N.V.","'s","Lever","Bros.","sponsors","tips","on","diet","and","exercise",",","followed","by","a","30-second","Lever","Bros.","commercial","."],
-    "sentence": "Each weekday matches a sponsor and a topic : On Mondays, Unilever N.V. 's Lever Bros. sponsors tips on diet and exercise, followed by a 30-second Lever Bros. commercial."
+    "sentence": "Each weekday matches a sponsor and a topic : On Mondays, Unilever N.V.'s Lever Bros. sponsors tips on diet and exercise, followed by a 30-second Lever Bros. commercial."
   },
   {
     "tokens": ["Viewers","can","call","a","900","number","for","additional","advice",",","which","will","be","tailored","to","their","needs","based","on","the","numbers","they","punch","(","'","Press","one","if","you","'re","pregnant",",","'","etc",".",")","."],
@@ -16705,7 +16705,7 @@
   },
   {
     "tokens": ["Nissan","Motor","Co.","'s","Infiniti","division","likes","to","insist","that","every","dealer","construct","and","furnish","a","building","in","a","Japanese","style","."],
-    "sentence": "Nissan Motor Co. 's Infiniti division likes to insist that every dealer construct and furnish a building in a Japanese style."
+    "sentence": "Nissan Motor Co.'s Infiniti division likes to insist that every dealer construct and furnish a building in a Japanese style."
   },
   {
     "tokens": ["Specifications","include","a","polished","bronze","sculpture","at","the","center","of","each","showroom","and","a","tile","bridge","spanning","a","stream","that","flows","into","the","building","from","outside","."],
@@ -16717,7 +16717,7 @@
   },
   {
     "tokens": ["Toyota","Motor","Corp.","'s","Lexus","division","also","provides","specifications","."],
-    "sentence": "Toyota Motor Corp. 's Lexus division also provides specifications."
+    "sentence": "Toyota Motor Corp.'s Lexus division also provides specifications."
   },
   {
     "tokens": ["But","only","two-thirds","of","Lexus","dealers","are","constructing","new","buildings","according","to","the","Lexus","specs","."],
@@ -18325,7 +18325,7 @@
   },
   {
     "tokens": ["Sony","Corp.","won","a","pretrial","order","blocking","U.S.","sales","of","Justin","Products","Inc.","'s","'","My","Own","'","line","of","portable","audio","players","for","children","."],
-    "sentence": "Sony Corp. won a pretrial order blocking U.S. sales of Justin Products Inc. 's ' My Own' line of portable audio players for children."
+    "sentence": "Sony Corp. won a pretrial order blocking U.S. sales of Justin Products Inc.'s 'My Own' line of portable audio players for children."
   },
   {
     "tokens": ["Judge","John","E.","Sprizzo","issued","the","order","in","Manhattan","federal","court",",","where","Sony","has","accused","the","tiny","company","of","illegally","knocking","off","the","'","My","First","Sony","'","line","."],
@@ -18529,7 +18529,7 @@
   },
   {
     "tokens": ["Dun","&","Bradstreet","Corp.","'s","Market","Data","Retrieval","unit","said","it","acquired","School","and","College","Construction","Reports","service","from","Intelligence","for","Education","Inc","."],
-    "sentence": "Dun & Bradstreet Corp. 's Market Data Retrieval unit said it acquired School and College Construction Reports service from Intelligence for Education Inc."
+    "sentence": "Dun & Bradstreet Corp.'s Market Data Retrieval unit said it acquired School and College Construction Reports service from Intelligence for Education Inc."
   },
   {
     "tokens": ["Terms","were","n't","disclosed","."],
@@ -20017,7 +20017,7 @@
   },
   {
     "tokens": ["Armco","'s","sales","representatives","visit","the","General","Motors","Corp.","'s","Fairfax","assembly","plant","in","Kansas","City",",","Mo.",",","two","or","three","days","a","week","."],
-    "sentence": "Armco's sales representatives visit the General Motors Corp. 's Fairfax assembly plant in Kansas City, Mo., two or three days a week."
+    "sentence": "Armco's sales representatives visit the General Motors Corp.'s Fairfax assembly plant in Kansas City, Mo., two or three days a week."
   },
   {
     "tokens": ["When","they","determined","that","GM","needed","parts","more","quickly",",","Armco","convinced","a","steel","service","center","to","build","a","processing","plant","nearby","so","shipments","could","be","delivered","within","15","minutes","."],
@@ -20129,7 +20129,7 @@
   },
   {
     "tokens": ["Polaroid","Corp.","'s","patent-infringement","damages","case","against","Eastman","Kodak","Co.",",","one","of","the","highest","stakes","corporate","trials","ever",",","is","getting","scant","attention","on","Wall","Street","."],
-    "sentence": "Polaroid Corp. 's patent-infringement damages case against Eastman Kodak Co., one of the highest stakes corporate trials ever, is getting scant attention on Wall Street."
+    "sentence": "Polaroid Corp.'s patent-infringement damages case against Eastman Kodak Co., one of the highest stakes corporate trials ever, is getting scant attention on Wall Street."
   },
   {
     "tokens": ["After","78","days","of","mind-numbing","testimony","in","federal","court","in","Boston",",","the","trial","is","being","all","but","ignored","by","analysts","and","patent","attorneys","."],
@@ -20377,7 +20377,7 @@
   },
   {
     "tokens": ["PepsiCo","Inc.","'s","chairman","said","he","is","'","more","than","comfortable","with","'","analysts","'","estimates","that","third-quarter","earnings","rose","to","at","least","98","cents","to","$","1","a","share","from","91","cents","the","year","earlier","."],
-    "sentence": "PepsiCo Inc. 's chairman said he is ' more than comfortable with' analysts' estimates that third-quarter earnings rose to at least 98 cents to $ 1 a share from 91 cents the year earlier."
+    "sentence": "PepsiCo Inc.'s chairman said he is ' more than comfortable with' analysts' estimates that third-quarter earnings rose to at least 98 cents to $ 1 a share from 91 cents the year earlier."
   },
   {
     "tokens": ["D.","Wayne","Calloway",",","also","chief","executive","officer","of","the","company",",","indicated","that","he","expects","analysts","to","raise","their","forecasts","for","1989","after","the","company","releases","its","earnings","today","."],

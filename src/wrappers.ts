@@ -1,18 +1,7 @@
-export interface WrapperDefinition {
-	a:string;
-	z:string;
-	test?:RegExp;
-	replace?:RegExp;
-	to?:string;
-}
-
-const list =<Array<WrapperDefinition>> [
+export const list:{a:string,z:string}[] = [
 	{
 		a:"'",
 		z:"'",
-		test:/^'\w+s'$/,
-		replace:/s'$/,
-		to:"s's",
 	},
 	{
 		a:"(",
