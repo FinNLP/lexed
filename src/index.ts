@@ -3,33 +3,31 @@ import sentenceLexer from "./sentence_level";
 import tokenLexer  from "./token_level";
 
 export interface WholeResult {
-	tokens:Array<ResultObject>;
+	tokens:string[][];
 	sentences:string[];
 	input:string;
 }
 
 export class Lexed {
 	public input:string;
-	public tokens:Array<ResultObject>;
-	public sentences:Array<string>;
+	public tokens:string[][];
+	public sentences:string[];
 
 	constructor(input:string){
 		this.input = input;
 	};
 
-	public sentenceLevel = function():Array<string>{
-		this.sentences =<Array<string>> sentenceLexer(this.input);
+	public sentenceLevel():string[]{
+		this.sentences = sentenceLexer(this.input);
 		return this.sentences;
 	};
 
-	public tokenLevel = function():Array<ResultObject>{
-		this.tokens =<Array<ResultObject>> this.sentences.map((sentence:string)=>{
-			return tokenLexer(sentence);
-		});
+	public tokenLevel():string[][]{
+		this.tokens = this.sentences.map((sentence:string)=>tokenLexer(sentence));
 		return this.tokens;
 	};
 
-	public lexer = function():WholeResult{
+	public lexer():WholeResult{
 		this.sentenceLevel();
 		this.tokenLevel();
 		return this;
