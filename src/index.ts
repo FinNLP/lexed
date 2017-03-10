@@ -32,26 +32,6 @@ export class Lexed {
 		this.tokenLevel();
 		return this;
 	};
-
-	static extend = {
-		
-		transformers:function(extension:Extension){
-			if(extension.level === "token") tokenExtensions.add(extension.transformer,extension.when);
-			else sentenceExtensions.add(extension.transformer,extension.when);
-		},
-		
-		abbreviations:function(input:Array<string>){
-			abbreviations.extend(input);
-		},
-
-		english:function(){
-			Lexed.extend.abbreviations(englishAbbreviations);
-			englishExtensions.forEach(e=>Lexed.extend.transformers(e));
-		},
-
-		sentenceExtensions:sentenceExtensions,
-		tokenExtensions:tokenExtensions.initialExtensions,
-	};
 }
 
 export default Lexed;
